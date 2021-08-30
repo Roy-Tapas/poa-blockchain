@@ -1,0 +1,32 @@
+=============== Aug 29, 2021 (CDT) ===============
+21:18:54.780095 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+21:18:54.785719 db@open opening
+21:18:54.785719 version@stat F·[] S·0B[] Sc·[]
+21:18:54.785719 db@janitor F·2 G·0
+21:18:54.785719 db@open done T·0s
+21:18:54.795822 db@close closing
+21:18:54.795822 db@close done T·0s
+=============== Aug 29, 2021 (CDT) ===============
+21:19:40.897166 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+21:19:40.900281 version@stat F·[] S·0B[] Sc·[]
+21:19:40.900281 db@open opening
+21:19:40.900281 journal@recovery F·1
+21:19:40.905844 journal@recovery recovering @1
+21:19:40.905844 memdb@flush created L0@2 N·627 S·50KiB "\x02d\xfc..\x19Ba,v435":"\xfe\x88\xcf..H\xef\xcc,v363"
+21:19:40.905844 version@stat F·[1] S·50KiB[50KiB] Sc·[0.25]
+21:19:40.915961 db@janitor F·3 G·0
+21:19:40.915961 db@open done T·15.6803ms
+21:21:48.062048 db@close closing
+21:21:48.062048 db@close done T·0s
+=============== Aug 29, 2021 (CDT) ===============
+21:21:59.096536 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+21:21:59.097087 version@stat F·[1] S·50KiB[50KiB] Sc·[0.25]
+21:21:59.097087 db@open opening
+21:21:59.097087 journal@recovery F·1
+21:21:59.100353 journal@recovery recovering @3
+21:21:59.102923 memdb@flush created L0@5 N·279 S·11KiB "Dat..ion,v629":"unc..own,v634"
+21:21:59.104896 version@stat F·[2] S·62KiB[62KiB] Sc·[0.50]
+21:21:59.112922 db@janitor F·4 G·0
+21:21:59.112922 db@open done T·15.8349ms
+22:06:06.875026 db@close closing
+22:06:06.875581 db@close done T·555.3µs
