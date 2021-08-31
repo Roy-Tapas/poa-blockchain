@@ -42,7 +42,7 @@ git clone https://github.com/Roy-Tapas/poa-blockchain.git
 * Then initialization of the nodes with Genesis json file
 ```
 ./geth --datadir node1 init poatestnet.json
-./geth --datadir node1 init poatestnet.json
+./geth --datadir node2 init poatestnet.json
 ```
 
 ### Now the nodes can be used to begin mining blocks 
