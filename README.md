@@ -33,7 +33,7 @@ git clone https://github.com/Roy-Tapas/poa-blockchain.git
     * Account adddress = `0x60CB75D3eefa172fC088c6608f6Ca6576Db09C00`
     * Password of node2 = `poanode`
 
-* In case you are interested, how to create nodes, following are the commands used:
+* In case you are interested, how to create nodes, following are the commands used to create the nodes:
 ```
 ./geth --datadir node1 account new
 ./geth --datadir node2 account new
