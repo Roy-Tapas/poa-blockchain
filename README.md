@@ -101,14 +101,14 @@ git clone https://github.com/Roy-Tapas/poa-blockchain.git
 
  ![send-transaction](Screenshots/10.Send-transaction.png)
  
-* Check activity logs in the both console windows.
+* Check activity logs in the both console windows - submitted transaction should be reflected in the log of node1 and node2 consoles.
  ![Txn-in-cmd-log](Screenshots/11.Txn-in-cmd-log.png)
  ![Txn-in-cmd-log2](Screenshots/12.Txn-in-cmd-log2.png)
  
 
 * Click the `Check TX Status` when the green message pops up, confirm the logout:
 
- ![CheckTXStatus](Screenshots/13.CheckTXStatus.png)
+ ![CheckFirstStatus](Screenshots/13.CheckFirstStatus.png)
 
 * You should see following intermediate status:
 
