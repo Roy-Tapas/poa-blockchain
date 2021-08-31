@@ -18,11 +18,11 @@ git clone https://github.com/Roy-Tapas/poa-blockchain.git
 
 * name of the network = `poatestnet`
     * JSON extract of the Genesis block = `poatestnet.json`
-    * poatestnet is based on **"Clique" Proof of Authority (POA)** algorithm
+    * poatestnet is based on "Clique" `Proof of Authority (POA)` algorithm
     * Bloacktime = `15 seconds`
     * network/chain id = `346`
 
-* In case you are interested, how genesis block is generated, please refer to the following screen-shots of "puppeth" command:
+* Following screen-shot of `puppeth` command that was used to generate the `Genesis block`:
 ![Genesis Block](Screenshots/01.Genesis-block.png)
 
 
@@ -40,23 +40,24 @@ git clone https://github.com/Roy-Tapas/poa-blockchain.git
 ```
 
 ### Now the nodes can be used to begin mining blocks 
-* Run node1 in a terminal windows with the commands:
+* Run **node1** in a terminal windows with the commands:
 ```
 ./geth --datadir node1 --unlock "0x33a0CCAF36Cf6D3FA8d15c8Ee7B2Bff641F2BD5b" --mine --rpc --password password.txt --allow-insecure-unlock 
 ```
-    ![Genesis Block](Screenshots/02.Node1-running.png)
-    * Note the SEALER_ONE_ENODE_ADDRESS as highlighted in the white box in the above screen-shot
+![Genesis Block](Screenshots/02.Node1-running.png)
+* Note the SEALER_ONE_ENODE_ADDRESS as highlighted in the white box in the above screen-shot
 
-* Run node2 in a new terminal windows with the commands:
+* Run **node2** in a new terminal windows with the commands:
     * Replace SEALER_ONE_ENODE_ADDRESS in the following geth command by the one as noted above
 ```
 ./geth --datadir node2 --unlock "0x60CB75D3eefa172fC088c6608f6Ca6576Db09C00" --mine --port 30304 --bootnodes "enode://SEALER_ONE_ENODE_ADDRESS@127.0.0.1:30303" --ipcdisable --allow-insecure-unlock
 ```
-    * **NOTE:** password.text is a text file that is already cloned from git repo. This file stores the node password.
-    ![Genesis Block](Screenshots/03.Node2-running.png)
+* **NOTE:** password.text is a text file that is already cloned from git repo. This file stores the node password.
+![Genesis Block](Screenshots/03.Node2-running.png)
 
-* Our private PoA blockchain should now be running!
-
+## Our private PoA blockchain should now be running!  
+  
+    
 ### With both the nodes up and running, the blockchain can be added to MyCrypto for testing by sending a test transcation.
 * Open the MyCrypto app, then click `Change Network` at the bottom left:
 
@@ -70,14 +71,14 @@ git clone https://github.com/Roy-Tapas/poa-blockchain.git
 
 * Type `ETH` in the Currency box.   
 
-* In the Chain ID box, type the chain id you generated during genesis creation.
+* In the Chain ID box, type the chain id you generated during genesis creation - 346 in this case.
 
 * In the URL box type: `http://127.0.0.1:8545`.  This points to the default RPC port on your local machine.
 
 * Finally, click `Save & Use Custom Node`. 
 
 
-### After connecting to the custom network in MyCrypto, it can be tested by sending money between accounts.
+### After connecting to the custom network in MyCrypto, it can be tested by sending ETHER between accounts.
 
 * Select the `View & Send` option from the left menu pane, then click `Keystore file`.
 
@@ -109,7 +110,11 @@ git clone https://github.com/Roy-Tapas/poa-blockchain.git
 
  ![CheckTXStatus](Screenshots/13.CheckTXStatus.png)
 
-* You should see the transaction go from `Pending` to `Successful` in around the same blocktime (15 secs)) set in the genesis.
+* You should see following intermediate status:
+
+ ![CheckInterStatus](Screenshots/14.CheckInterStatus.png)
+
+* You should see the transaction go from `Pending` to `Successful` in around the same blocktime (15 secs) set in the genesis.
 
 * You can click the `Check TX Status` button to update the status. In case status doesn't change to Green, involve dev team - there might problem in the network.
 
