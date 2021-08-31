@@ -1,48 +1,57 @@
-# Proof of Authority Development Chain
+# Proof of Authority Private Blockchain Development
 
-This repo contains a custom private blockchain. Following are the instructions of how to start and use it using the pre-configured
-nodes and accounts.
+This repo contains a `custom private Blockchain`. Following are the instructions of how to start and use it using the pre-configured
+nodes (also known as accounts).
 
 ## Instructions
 
-### Download the pre-configured node1, node2 and poatestnet.json (json for the genesis block)
-* clone the the following repo into your local machine by issuing following command from gitbash
-    * git clone https://github.com/Roy-Tapas/poa-blockchain.git
-* Download "geth and tools" from the link https://gethstore.blob.core.windows.net/builds/geth-alltools-windows-386-1.10.8-26675454.zip
-* Extract the zip file in the the folder poa-blockchain - this folder will now have node1, node2, poatestnet.json and executables such as geth.exe, puppeth.exe and few other exe files
-* Download and install MyCrypto wallet, install the wallet. Note down the seed phrases in a piece of paper and keep it in a safe place.
+### Download the pre-configured nodes (node1, node2) and json for the genesis block (poatestnet.json)
+* clone the the repo into your local machine by issuing following command from gitbash
+```
+git clone https://github.com/Roy-Tapas/poa-blockchain.git
+```
+* Download `geth and tools` from the link https://gethstore.blob.core.windows.net/builds/geth-alltools-windows-386-1.10.8-26675454.zip
+* Extract the zip file in the the folder `poa-blockchain` - this folder will now have node1, node2, poatestnet.json and executables such as geth.exe, puppeth.exe and few other exe files
+* Download and install `MyCrypto wallet`, install the wallet. Note down the seed phrases in a piece of paper and keep it in a safe place.
 
 ### Following information will be needed to run the nodes
 
-* name of the network = poatestnet
-    * JSON extract of the Genesis block = poatestnet.json
-    * poatestnet is based on "Clique" Proof of Authority (POA) algorithm
-    * Bloacktime = 15 seconds
-    * network/chain id = 346 
+* name of the network = `poatestnet`
+    * JSON extract of the Genesis block = `poatestnet.json`
+    * poatestnet is based on **"Clique" Proof of Authority (POA)** algorithm
+    * Bloacktime = `15 seconds`
+    * network/chain id = `346`
 
 * In case you are interested, how genesis block is generated, please refer to the following screen-shots of "puppeth" command:
 ![Genesis Block](Screenshots/01.Genesis-block.png)
 
-* name of bootnode = node1
-    * Account adddress = 0x33a0CCAF36Cf6D3FA8d15c8Ee7B2Bff641F2BD5b
-    * Password of node1 = poanode
-* name of other node in the network = node2
-    * Account adddress = 0x60CB75D3eefa172fC088c6608f6Ca6576Db09C00
-    * Password of node2 = poanode
+
+* name of bootnode = **node1**
+    * Account adddress = `0x33a0CCAF36Cf6D3FA8d15c8Ee7B2Bff641F2BD5b`
+    * Password of node1 = `poanode`
+* name of other node in the network = **node2**
+    * Account adddress = `0x60CB75D3eefa172fC088c6608f6Ca6576Db09C00`
+    * Password of node2 = `poanode`
 
 * In case you are interested, how to create nodes, following are the commands used:
-    * ./geth --datadir node1 account new
-    * ./geth --datadir node2 account new
+```
+./geth --datadir node1 account new
+./geth --datadir node2 account new
+```
 
 ### Now the nodes can be used to begin mining blocks 
 * Run node1 in a terminal windows with the commands:
-    * ./geth --datadir node1 --unlock "0x33a0CCAF36Cf6D3FA8d15c8Ee7B2Bff641F2BD5b" --mine --rpc --password password.txt --allow-insecure-unlock 
+```
+./geth --datadir node1 --unlock "0x33a0CCAF36Cf6D3FA8d15c8Ee7B2Bff641F2BD5b" --mine --rpc --password password.txt --allow-insecure-unlock 
+```
     ![Genesis Block](Screenshots/02.Node1-running.png)
     * Note the SEALER_ONE_ENODE_ADDRESS as highlighted in the white box in the above screen-shot
 
 * Run node2 in a new terminal windows with the commands:
     * Replace SEALER_ONE_ENODE_ADDRESS in the following geth command by the one as noted above
-    * ./geth --datadir node2 --unlock "0x60CB75D3eefa172fC088c6608f6Ca6576Db09C00" --mine --port 30304 --bootnodes "enode://SEALER_ONE_ENODE_ADDRESS@127.0.0.1:30303" --ipcdisable --allow-insecure-unlock
+```
+./geth --datadir node2 --unlock "0x60CB75D3eefa172fC088c6608f6Ca6576Db09C00" --mine --port 30304 --bootnodes "enode://SEALER_ONE_ENODE_ADDRESS@127.0.0.1:30303" --ipcdisable --allow-insecure-unlock
+```
     * **NOTE:** password.text is a text file that is already cloned from git repo. This file stores the node password.
     ![Genesis Block](Screenshots/03.Node2-running.png)
 
@@ -53,7 +62,7 @@ nodes and accounts.
 
 ![change network](Screenshots/04.Change-network.png)
 
-* Click "Add Custom Node", then add the custom network information as per the screen-shot below.
+* Click `Add Custom Node`, then add the custom network information as per the screen-shot below.
 
 * Make sure that you scroll down to choose `Custom` in the "Network" column to reveal more options like `Chain ID`:
 
